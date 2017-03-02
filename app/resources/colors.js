@@ -1,7 +1,6 @@
 const colors = {
-    headerColor: '#23478C',
-    
-    backgroundColor: "#191919",
-}
+  headerColor: '#23478C',
+  backgroundColor: '#191919',
+};
 
-module.exports = colors
+module.exports = colors;

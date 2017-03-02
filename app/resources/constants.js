@@ -1,13 +1,13 @@
-import colors from 'resources/colors';
-import {iconMenu, iconBack} from 'resources/images';
-let constants = {}
+import { colors, images } from 'resources';
+
+const constants = {};
 
 constants.serviceDefaultUrl = 'http://api.fixer.io/';
 
 /* UI CONSTANTS */
 constants.headerColor = colors.headerColor;
 
-constants.menuIcon = iconMenu;
-constants.backIcon = iconBack;
+constants.menuIcon = images.iconMenu;
+constants.backIcon = images.iconBack;
 
-module.exports = constants
+module.exports = constants;
