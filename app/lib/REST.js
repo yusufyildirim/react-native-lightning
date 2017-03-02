@@ -1,143 +1,129 @@
-import globals from 'app/stores/GlobalsStore'
+import { globals } from 'stores';
 
 class REST {
+  constructor(screen = null) {
+    this.screen = screen;
+    this.params = {};
+  }
 
-    constructor(screen = null) {
-        this.screen = screen;
-        this.params = {};
+  showLoading() {
+    if (this.screen != null) {
+      this.screen.setState({ loading: true });
     }
+  }
 
-    showLoading() {
-        if (this.screen != null) {
-            this
-                .screen
-                .setState({loading: true});
-        }
+  hideLoading() {
+    if (this.screen != null) {
+      this.screen.setState({ loading: false });
     }
+  }
 
-    hideLoading() {
-        if (this.screen != null) {
-            this
-                .screen
-                .setState({loading: false});
-        }
+  doSomeWork(reqParams = {}) {
+    this.showLoading();
+
+    if (this.method === 'GET') {
+      return fetch(this.serviceUrl).then(response => response.json()).then((json) => {
+        this.hideLoading();
+        return json;
+      });
     }
+    return fetch(this.serviceUrl, reqParams).then(response => response.json()).then((json) => {
+      this.hideLoading();
+      return json;
+    });
+  }
 
-    doSomeWork(reqParams = {}) {
-        this.showLoading();
+  setServiceUrl(serviceUrl) {
+    this.serviceUrl = serviceUrl;
+  }
 
-        if (this.method == "GET") {
-            return fetch(this.serviceUrl).then((response) => response.json()).then((json) => {
+  setParams(params) {
+    this.params = params;
+  }
 
-                this.hideLoading();
-                return json
-            });
-        } else {
+  setHeader(params) {
+    this.headers = params;
+  }
 
-            return fetch(this.serviceUrl, reqParams).then((response) => response.json()).then((json) => {
+  prepareGet() {
+    const params = {
+      ...globals.serviceDefaultParams,
+      ...this.params,
+    };
 
-                this.hideLoading();
-                return json
-            });
-        }
+    /* Generating url with params */
+    const urlExt = Object.keys(params).reduce(
+      (prevVal, elem, index) => {
+        const amp = index !== 0 ? '&' : '';
+        const val = `${amp + elem}=${params[elem]}`;
 
-    }
+        return prevVal + val;
+      },
+      '',
+    );
 
-    setServiceUrl(serviceUrl) {
-        this.serviceUrl = serviceUrl;
-    }
+    const urlWithParams = `${this.serviceUrl}?${urlExt}`;
 
-    setParams(params) {
-        this.params = params;
-    }
+    // Set New Link
+    this.serviceUrl = urlWithParams;
 
-    setHeader(params) {
-        this.headers = params;
-    }
+    return this.doSomeWork();
+  }
 
-    prepareGet(method) {
-        const params = {
-            ...globals.serviceDefaultParams,
-            ...this.params
-        };
+  preparePost() {
+    const params = {
+      ...globals.serviceDefaultParams,
+      ...this.params,
+    };
 
-        /* Generating url with params */
-        var urlExt = Object
-            .keys(params)
-            .reduce(function (prevVal, elem, index) {
-                let amp = index != 0
-                    ? "&"
-                    : "";
-                let val = amp + elem + "=" + params[elem];
+    const headers = {
+      Authorization: `Bearer ${globals.serviceDefaultParams.token}`,
+      ...this.headers,
+    };
 
-                return prevVal + val;
-            }, "");
-
-        let urlWithParams = `${this.serviceUrl}?${urlExt}`;
-
-        // Set New Link
-        this.serviceUrl = urlWithParams;
-
-        return this.doSomeWork()
-    }
-
-    preparePost() {
-        const params = {
-            ...globals.serviceDefaultParams,
-            ...this.params
-        };
-
-        const headers = {
-            Authorization: "Bearer " + globals.serviceDefaultParams.token,
-            ...this.headers
-        }
-
-        /*var body = new FormData();
+    /* var body = new FormData();
 
         for (var k in params) {
             body.append(k, params[k]);
         }*/
 
-        let body = JSON.stringify(params);
+    const body = JSON.stringify(params);
 
-        let reqContent = {
-            method: this.method,
-            headers: headers,
-            body: body
+    const reqContent = {
+      method: this.method,
+      headers,
+      body,
+    };
 
-        }
+    return this.doSomeWork(reqContent);
+  }
 
-        return this.doSomeWork(reqContent)
-    }
+  post() {
+    this.method = 'POST';
 
-    post() {
-        this.method = "POST";
+    return this.preparePost();
+  }
 
-        return this.preparePost();
-    }
+  put() {
+    this.method = 'PUT';
 
-    put() {
-        this.method = "PUT";
+    return this.preparePost();
+  }
 
-        return this.preparePost();
-    }
+  delete() {
+    this.method = 'DELETE';
 
-    delete() {
-        this.method = "DELETE";
+    return this.preparePost();
+  }
 
-        return this.preparePost();
-    }
+  get() {
+    this.method = 'GET';
+    return this.prepareGet();
+  }
 
-    get() {
-        this.method = "GET";
-        return this.prepareGet();
-
-    }
-
-    onError(f) {
-        this.onErrorFunction = f;
-    }
-
+  onError(f) {
+    this.onErrorFunction = f;
+  }
 }
 
-module.exports = REST
+module.exports = REST;
