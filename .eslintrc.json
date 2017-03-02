@@ -20,5 +20,8 @@
         "stores",
         "lib"
       ]
+    },
+    "env": {
+        "browser": true
     }
 }
