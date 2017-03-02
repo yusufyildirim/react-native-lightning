@@ -1,9 +1,6 @@
-import { StyleSheet, Dimensions } from 'react-native';
-import fonts from 'resources/fonts';
-import colors from 'resources/colors';
+import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-
   container: {
     flex: 1,
     alignItems: 'center',
@@ -13,8 +10,7 @@ const styles = StyleSheet.create({
   lightning: {
     fontSize: 26,
     marginTop: 10,
-  }
-
+  },
 });
 
 module.exports = styles;

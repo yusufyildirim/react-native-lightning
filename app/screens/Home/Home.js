@@ -1,45 +1,44 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { observer } from 'mobx-react/native';
-import globals from 'stores/GlobalsStore';
-import t from 'stores/TranslationsStore'
-import {getCurrency} from 'services'
+import { translations } from 'stores';
+import { getCurrency } from 'services';
 
-import {View, Image, Text} from 'react-native';
-import {Container, Header} from 'components'
+import { View, Image, Text } from 'react-native';
+import { Container, Header } from 'components';
 
-import { iconLightning } from 'resources/images'
-import colors from 'resources/colors'
-import styles from './styles'
+import { images } from 'resources';
+import styles from './styles';
 
-@observer
-class HomeScreen extends Component {
-
+@observer class HomeScreen extends Component {
   static navigatorStyle = {
-    navBarHidden: true
+    navBarHidden: true,
   };
 
   constructor(props) {
-    super(props)
+    super(props);
 
-    this
-      .props
-      .navigator
-      .setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
+    this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
+  }
+
+  componentDidMount() {
+    getCurrency()
+      .then((response) => {
+        alert(JSON.stringify(response));
+      })
+      .catch((response) => {
+        alert(response);
+      });
   }
 
   onNavigatorEvent(event) {
-    if (event.type == 'DeepLink') {
-      
-      const parts = event
-        .link
-        .split('/');
+    if (this.event.type === 'DeepLink') {
+      const parts = event.link.split('/');
 
-      if (parts[0] == 'screen') {
-
+      if (parts[0] === 'screen') {
         alert(parts[1]);
 
-        // You can push to screens like that
-        /*this
+        // You can push screens like that
+        /* this
           .props
           .navigator
           .push({
@@ -51,39 +50,27 @@ class HomeScreen extends Component {
 
   menuAction() {
     /* OPEN DRAWER */
-    this
-      .props
-      .navigator
-      .toggleDrawer({
-        side: 'left',
-        animated: true
-      });
+    this.props.navigator.toggleDrawer({
+      side: 'left',
+      animated: true,
+    });
   }
-
-  componentDidMount() {
-    getCurrency()
-    .then((response)=>{
-      alert(JSON.stringify(response));
-    })
-    .catch((response)=>{
-      alert(response);
-    })
-  }
-  
 
   render() {
-
     return (
       <Container>
-        <Header menu title={t.getTrans('homeTitle')} onLeftIconPress={() => this.menuAction()}/>
-          <View style={styles.container}>
-            <Image source={iconLightning} />
-            <Text style={styles.lightning}>Lightning!</Text>
-          </View>
-      </Container> 
+        <Header menu title={translations.getTrans('homeTitle')} onLeftIconPress={() => this.menuAction()} />
+        <View style={styles.container}>
+          <Image source={images.iconLightning} />
+          <Text style={styles.lightning}>Lightning!</Text>
+        </View>
+      </Container>
     );
   }
-
 }
 
-module.exports = HomeScreen
+HomeScreen.propTypes = {
+  navigator: PropTypes.object.isRequired,
+};
+
+module.exports = HomeScreen;

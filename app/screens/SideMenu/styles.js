@@ -1,11 +1,10 @@
 import { StyleSheet } from 'react-native';
 
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#F2F6FC',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
 
   button: {
@@ -13,8 +12,8 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     backgroundColor: '#F5A623',
     alignItems: 'center',
-    justifyContent: 'center'
-  }
+    justifyContent: 'center',
+  },
 });
 
 module.exports = styles;
