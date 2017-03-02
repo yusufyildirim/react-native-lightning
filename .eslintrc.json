@@ -1,0 +1,18 @@
+{
+   "parser": "babel-eslint",
+    "extends": "airbnb",
+    "rules": {
+      "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
+      "prefer-stateless-function": [0, { "ignorePureComponents": true }]
+    },
+    "plugins": [
+        "react",
+        "jsx-a11y",
+        "import"
+    ],
+    "settings": {
+      "import/resolver": {
+        "babel-module": {}
+      }
+    }
+}
