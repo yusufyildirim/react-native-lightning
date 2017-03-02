@@ -14,9 +14,9 @@ export default function startApp() {
     },
 
     drawer: {
-        left: {
-            screen: 'SideMenu'
-        }
+      left: {
+        screen: 'SideMenu',
+      },
     },
   });
 }
