@@ -1,12 +1,11 @@
 import ScalableText from 'react-native-text';
-
-import Container from './Container'
-import Header from './Header'
+import Container from './Container';
+import Header from './Header';
 
 const components = {
-    Container,
-    Header,
-    ScalableText
-}
+  Container,
+  Header,
+  ScalableText,
+};
 
-module.exports = components
+module.exports = components;
