@@ -1,13 +1,13 @@
-let en = {
-    error: "Error",
-    warning: "Warning",
-    info: "Info",
-    success: "Success",
- 
-    english:"English",
-    turkish:"Turkish",
+const en = {
+  error: 'Error',
+  warning: 'Warning',
+  info: 'Info',
+  success: 'Success',
 
-    homeTitle: 'Home Page'
-}
+  english: 'English',
+  turkish: 'Turkish',
 
-module.exports = en
+  homeTitle: 'Home Page',
+};
+
+module.exports = en;

@@ -1,13 +1,13 @@
-let tr = {
-    error: "Hata",
-    warning: "Uyarı",
-    info: "Bilgi",
-    success: "Başarılı",
+const tr = {
+  error: 'Hata',
+  warning: 'Uyarı',
+  info: 'Bilgi',
+  success: 'Başarılı',
 
-    english: "İngilizce",
-    turkish: "Türkçe",
+  english: 'İngilizce',
+  turkish: 'Türkçe',
 
-    homeTitle: 'Ana Sayfa'
-}
+  homeTitle: 'Ana Sayfa',
+};
 
-module.exports = tr
+module.exports = tr;
