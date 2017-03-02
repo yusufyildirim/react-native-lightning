@@ -1,5 +1,22 @@
-/**
- * Created by lostofis on 12/01/2017.
- */
+import colors from './colors';
+import constants from './constants';
+import fonts from './fonts';
+import images from './images';
 
-// Bu klasör içinde bulunan class ve variableları return etmekle yükümle
+import tr from './translations/tr';
+import en from './translations/en';
+
+const translationFiles = {
+  tr,
+  en,
+};
+
+const resources = {
+  colors,
+  constants,
+  fonts,
+  images,
+  translationFiles,
+};
+
+export default resources;
