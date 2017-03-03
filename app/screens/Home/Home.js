@@ -9,7 +9,8 @@ import { Container, Header } from 'components';
 import { images } from 'resources';
 import styles from './styles';
 
-@observer class HomeScreen extends Component {
+@observer
+class HomeScreen extends Component {
   static navigatorStyle = {
     navBarHidden: true,
   };
@@ -31,8 +32,10 @@ import styles from './styles';
   }
 
   onNavigatorEvent(event) {
+    this.event = event;
+
     if (this.event.type === 'DeepLink') {
-      const parts = event.link.split('/');
+      const parts = this.event.link.split('/');
 
       if (parts[0] === 'screen') {
         alert(parts[1]);
