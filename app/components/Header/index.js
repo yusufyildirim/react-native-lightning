@@ -1,3 +1,3 @@
-import Header from './Header'
+import Header from './Header';
 
-module.exports = Header
+module.exports = Header;

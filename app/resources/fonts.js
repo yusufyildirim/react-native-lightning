@@ -1,17 +1,17 @@
-import {Platform} from 'react-native';
-let fonts;
+import { Platform } from 'react-native';
+
+let fonts = {};
 
 if (Platform.OS === 'ios') {
-    fonts = {
-        NexaBold: "NexaBold",
-        AvertaDemo: "AvertaDemo-Regular"
-
-    }
+  fonts = {
+    NexaBold: 'NexaBold',
+    AvertaDemo: 'AvertaDemo-Regular',
+  };
 } else {
-    fonts = {
-        NexaBold: "nexa_bold",
-        AvertaDemo: "avertademo_regular"
-    }
+  fonts = {
+    NexaBold: 'nexa_bold',
+    AvertaDemo: 'avertademo_regular',
+  };
 }
 
-module.exports = fonts
+module.exports = fonts;

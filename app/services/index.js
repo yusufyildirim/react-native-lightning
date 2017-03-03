@@ -1,8 +1,7 @@
+import getCurrency from './getCurrency';
 
-import getCurrency from './getCurrency'
+const services = {
+  getCurrency,
+};
 
-let services = {
-    getCurrency,
-}
-
-module.exports = services
+module.exports = services;

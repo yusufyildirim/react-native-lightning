@@ -3,7 +3,8 @@
     "extends": "airbnb",
     "rules": {
       "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
-      "prefer-stateless-function": [0, { "ignorePureComponents": true }]
+      "react/prefer-stateless-function": [0, { "ignorePureComponents": false }],
+      "react/forbid-prop-types": [0, { "forbid": [] }]
     },
     "plugins": [
         "react",
@@ -11,8 +12,17 @@
         "import"
     ],
     "settings": {
-      "import/resolver": {
-        "babel-module": {}
-      }
+      "import/core-modules": [
+        "app",
+        "components",
+        "resources",
+        "services",
+        "screens",
+        "stores",
+        "lib"
+      ]
+    },
+    "env": {
+        "browser": true
     }
 }

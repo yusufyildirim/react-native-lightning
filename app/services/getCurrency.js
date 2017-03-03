@@ -1,13 +1,13 @@
-import REST from 'lib/REST';
-import { serviceDefaultUrl } from 'resources/constants';
+import { REST } from 'lib';
+import { constants } from 'resources';
 
 function getCurrency(screen) {
   return new Promise((resolve, reject) => {
-    let rest = new REST(screen);
-    
-    rest.setServiceUrl(serviceDefaultUrl + '/latest')
-    rest.setParams({ 'base': 'USD' })
-    rest.setHeader({ 'Accept': "application/json", 'Content-Type': 'application/json' })
+    const rest = new REST(screen);
+
+    rest.setServiceUrl(`${constants.serviceDefaultUrl}/latest`);
+    rest.setParams({ base: 'USD' });
+    rest.setHeader({ Accept: 'application/json', 'Content-Type': 'application/json' });
 
     rest
       .get()

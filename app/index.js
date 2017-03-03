@@ -1,7 +1,7 @@
 import { Navigation } from 'react-native-navigation';
 
 // screen related book keeping
-import { registerScreens } from './screens';
+import registerScreens from './screens';
 
 registerScreens();
 
@@ -14,9 +14,9 @@ export default function startApp() {
     },
 
     drawer: {
-        left: {
-            screen: 'SideMenu'
-        }
+      left: {
+        screen: 'SideMenu',
+      },
     },
   });
 }

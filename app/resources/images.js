@@ -1,16 +1,15 @@
 const images = {
-    
-    /* ICONS */
-    iconLightning: require('resources/images/icons/lightning.png'),
-    
-    iconBack: require('resources/images/icons/back.png'),
-    iconMenu: require('resources/images/icons/menu.png'),
+  /* ICONS */
+  iconLightning: require('resources/images/icons/lightning.png'),
 
-    /* ALERT */
-    alertCancel: require('resources/images/alertbox/cancel.png'),
-    alertError: require('resources/images/alertbox/error.png'),
-    alertInfo: require('resources/images/alertbox/info.png'),
-    alertWarn: require('resources/images/alertbox/warn.png')
-}
+  iconBack: require('resources/images/icons/back.png'),
+  iconMenu: require('resources/images/icons/menu.png'),
 
-module.exports = images
+  /* ALERT */
+  alertCancel: require('resources/images/alertbox/cancel.png'),
+  alertError: require('resources/images/alertbox/error.png'),
+  alertInfo: require('resources/images/alertbox/info.png'),
+  alertWarn: require('resources/images/alertbox/warn.png'),
+};
+
+module.exports = images;
