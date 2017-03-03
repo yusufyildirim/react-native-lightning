@@ -10,7 +10,7 @@
         "services": "services",
         "screens": "screens",
         "stores": "stores",
-	"lib": "lib",
+	      "lib": "lib",
         "underscore": "lodash"
       }
     }]
