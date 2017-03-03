@@ -6,4 +6,4 @@ const stores = {
   translations,
 };
 
-export default stores;
+module.exports = stores;

@@ -19,4 +19,4 @@ const resources = {
   translationFiles,
 };
 
-export default resources;
+module.exports = resources;

@@ -4,4 +4,4 @@ const libs = {
   REST,
 };
 
-export default libs;
+module.exports = libs;
