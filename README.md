@@ -46,6 +46,11 @@ There is 3 ways for using Lightning;
 
 After you get this project on your MAC or PC, go to project folder from your Terminal / Console. After that, use these commands down below;
 
+First;
+`npm install`
+
+After that,
+
 For iOS;
 `react-native run-ios`
 
