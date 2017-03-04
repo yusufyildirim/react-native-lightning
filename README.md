@@ -14,7 +14,7 @@ Learning stage can be hard and expensive for people... We experienced a lot of t
 
 ### What I will learn from this repository? ###
 
-Actually, I'm not sure, It depends on you. But we'll try our best about key points, tricky things you know... And...
+Actually, I'm not sure, It depends on you. But we'll try our best about key points, tricky things you know...
 
 ### What we'll get from this setup? ###
 Libraries guys, libraries are god's gift for us! I mean, thanks to people who developed those, too (!) Anyway, enough talk, let's go in.
@@ -26,8 +26,13 @@ What / Which? | Why?
 [React Native + i18n.js](https://github.com/AlexanderZaytsev/react-native-i18n) | Most of us need multi language support, so let's bring it into our box!
 [React Native Scalable Text](https://github.com/knowbody/react-native-text) | There is infinite screen resolutions and we are developing our apps to all of them (almost) And we are using Text component all the time but there is an issue... This component is not scaling itself for all resolutions but we have Scalable Text for that!
 [MobX](https://mobx.js.org) | We need more than component's own states... This is why we need MobX
+[ESLint](http://eslint.org) | ESlint warns you whenever you doing something wrong.It teachs you, how you have to code. So, your code will be clean, readable, more stable and more optimized. Use this, guys, please use this.
+[Jest Test Framework](https://facebook.github.io/jest/) | Jest is a Test Framework developed and used by Facebook. We're not using -for now- on this project but you can use.
 
 ### How do I get start!? ###
+Coming soon...
+
+### Wiki ###
 Coming soon...
 
 ### How can I contact with you? ###
