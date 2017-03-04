@@ -6,7 +6,7 @@
 </h1>
 <h3 align="center">A start point for React Native lovers</h3>
 
-Lightning is provides 'Lightning fast' startup for your React Native projects and complete guide for your journey!. We worked hard, experienced a lot, discussed so much and built this.
+Lightning is provides `Lightning fast` startup for your React Native projects and complete guide for your journey!. We worked hard, experienced a lot, discussed so much and built this.
 
 ### What is this repository for? ###
 
@@ -30,7 +30,29 @@ What / Which? | Why?
 [Jest Test Framework](https://facebook.github.io/jest/) | Jest is a Test Framework developed and used by Facebook. We're not using -for now- on this project but you can use.
 
 ### How do I get start!? ###
-Coming soon...
+First of all please be sure you have knowladge about Javascript, EcmaScript 6, React.JS before start. I mean, if you're not even heard about these technologies, watch tutorials, read articles etc. That would be helpful for you. Otherwise, you might be lost yourself in the codes. Like... WT*  is goin on here?
+
+If you have knowladge, let's start. You must read [React Native - Getting Started Tutorial](https://facebook.github.io/react-native/docs/getting-started.html) and follow these instructions. Because we need React Native which is ready for run, right?
+
+If you done everything right and you were run your first sample React Native project -as they told on the tutorial-, you are ready to go!
+
+There is 3 ways for using Lightning;
+
+1) Fork
+<br>
+2) Clone
+<br>
+3) Download ZIP
+
+After you get this project on your MAC or PC, go to project folder from your Terminal / Console. After that, use these commands down below;
+
+For iOS;
+`react-native run-ios`
+
+For Android;
+`react-native run-android`
+
+PS: If you want to run for iOS, you need MacOS. You can't run this command on Windows or Linux.
 
 ### Wiki ###
 Coming soon...
