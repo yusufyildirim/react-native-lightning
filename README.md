@@ -5,7 +5,7 @@
   <br>
 </h1>
 <h3 align="center">A start point for React Native lovers</h3>
---------
+
 Lightning is provides 'Lightning fast' startup for your React Native projects and complete guide for your journey!. We worked hard, experienced a lot, discussed so much and built this.
 
 ### What is this repository for? ###
