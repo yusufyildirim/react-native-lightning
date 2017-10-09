@@ -1,4 +1,4 @@
-const en = {
+export default {
   error: 'Error',
   warning: 'Warning',
   info: 'Info',
@@ -9,5 +9,3 @@ const en = {
 
   homeTitle: 'Home Page',
 };
-
-module.exports = en;

@@ -6,7 +6,7 @@ import android.util.Log;
 
 import com.facebook.react.ReactApplication;
 import com.reactnativenavigation.NavigationApplication;
-import com.i18n.reactnativei18n.ReactNativeI18n;
+import com.AlexanderZaytsev.RNI18n.RNI18nPackage;
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -26,7 +26,7 @@ public class MainApplication extends NavigationApplication {
   @Override
   public List<ReactPackage> createAdditionalReactPackages() {
     return Arrays.<ReactPackage>asList(
-            new ReactNativeI18n()
+            new RNI18nPackage()
     );
   }
 }

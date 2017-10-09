@@ -1,7 +1,8 @@
-import getCurrency from './getCurrency';
+import examplePostService from './examplePostService';
+import exampleGetService from './exampleGetService';
 
-const services = {
-  getCurrency,
+export {
+  examplePostService,
+  exampleGetService,
 };
 
-module.exports = services;
