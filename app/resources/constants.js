@@ -1,14 +1,6 @@
-import colors from 'resources/colors';
-import images from 'resources/images';
-
-const constants = {
+export default {
   serviceDefaultUrl: 'http://api.fixer.io/',
-
-  /* UI CONSTANTS */
-  headerColor: colors.headerColor,
-
-  menuIcon: images.iconMenu,
-  backIcon: images.iconBack,
+  serviceTimeout: 10000, // ms
+  googleAnalyticsKey: 'UA-123456-7',
 };
 
-module.exports = constants;

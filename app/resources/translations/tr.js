@@ -1,4 +1,4 @@
-const tr = {
+export default {
   error: 'Hata',
   warning: 'Uyarı',
   info: 'Bilgi',
@@ -9,5 +9,3 @@ const tr = {
 
   homeTitle: 'Ana Sayfa',
 };
-
-module.exports = tr;

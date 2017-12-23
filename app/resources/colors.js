@@ -1,6 +1,5 @@
-const colors = {
-  headerColor: '#23478C',
-  backgroundColor: '#191919',
+export default {
+  primary: '#23478C',
+  secondary: '#191919',
+  white: '#FFFFFF',
 };
-
-module.exports = colors;

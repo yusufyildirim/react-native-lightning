@@ -1,17 +1,20 @@
 {
 "presets": ["react-native"],
-"plugins": ['transform-decorators-legacy',
+"plugins": [
     ["module-resolver", {
       "root": ["./app"],
       "alias": {
         "app": "./app",
         "components": "components",
+
+        "redux": "redux",
+        "sagas": "redux/sagas",
+        "ducks": "redux/ducks",
+
         "resources": "resources",
         "services": "services",
         "screens": "screens",
-        "stores": "stores",
-	      "lib": "lib",
-        "underscore": "lodash"
+	"utils": "utils",
       }
     }]
   ]

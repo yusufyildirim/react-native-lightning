@@ -1,0 +1,31 @@
+target 'CoreProject' do
+  platform :ios, '8.0'
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+  # Pods for 'DontBeAlone'
+
+  # Explicitly include Yoga if you are using RN >= 0.42.0
+  pod 'Yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
+
+  # Your 'node_modules' directory is probably in the root of your project,
+  # but if not, adjust the `:path` accordingly
+  pod 'React', :path => '../node_modules/react-native', :subspecs => [
+    'Core',
+    'DevSupport',
+    'BatchedBridge',
+    'RCTText',
+    'RCTNetwork',
+    'RCTImage',
+    'RCTWebSocket', # needed for debugging
+    # Add any other subspecs you want to use in your project
+  ]
+
+  pod 'RNI18n', :path => '../node_modules/react-native-i18n'
+  
+  # Facebook SDK
+  #pod 'Bolts'
+  #pod 'FBSDKCoreKit'
+  #pod 'FBSDKLoginKit'
+  #pod 'FBSDKShareKit'
+
+end

@@ -2,21 +2,13 @@ import colors from './colors';
 import constants from './constants';
 import fonts from './fonts';
 import images from './images';
+import translation from './translation';
 
-import tr from './translations/tr';
-import en from './translations/en';
-
-const translationFiles = {
-  tr,
-  en,
-};
-
-const resources = {
-  colors,
+module.exports = {
   constants,
-  fonts,
+  colors,
   images,
-  translationFiles,
+  fonts,
+  translation,
 };
 
-module.exports = resources;

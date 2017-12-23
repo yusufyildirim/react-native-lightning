@@ -1,40 +1,39 @@
-import { StyleSheet } from 'react-native';
-
+import { StyleSheet, Platform } from 'react-native';
 import { colors } from 'resources';
 
-const styles = StyleSheet.create({
-  topBar: {
-    // position: 'absolute',
-    // justifyContent: 'center',
-    alignItems: 'center',
-    // right: 0,
-    // left: 0,
+const headerHeight = Platform.OS === 'ios' ? 76 : 56; // Header yüksekliği iOS ise 76 değilse 56
+
+const styles = {
+  container: {
+    backgroundColor: colors.primary,
+    height: headerHeight,
+    justifyContent: 'flex-end',
+  },
+  contentArea: {
+    height: 56,
     flexDirection: 'row',
-    height: 56,
+    justifyContent: 'space-between',
+    padding: 10,
   },
-  title: {
-    fontSize: 20,
-    color: 'white',
-    textAlign: 'center',
-  },
-  topBarContainer: {
-    backgroundColor: colors.headerColor,
-    zIndex: 99998,
-  },
-  statusBar: {
-    height: 20,
-  },
-  titleArea: {
-    flex: 1,
-
-    justifyContent: 'center',
+  left: {
+    padding: 5,
     alignItems: 'center',
-  },
-  leftIcon: {
-    paddingHorizontal: 15,
-    height: 56,
     justifyContent: 'center',
   },
-});
+  center: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    right: 0,
+    height: 56,
+  },
+  right: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 5,
+  },
+};
 
-module.exports = styles;
+export default styles;

@@ -1,2 +1,2 @@
-import startApp from './app/';
+import startApp from './app/index';
 startApp();
