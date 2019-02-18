@@ -1,0 +1,3 @@
+rootProject.name = 'inform_mobile'
+
+include ':app'

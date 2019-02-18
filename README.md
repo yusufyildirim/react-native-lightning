@@ -1,0 +1,1 @@
+inform_mobile
