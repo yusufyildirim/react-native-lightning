@@ -7,7 +7,8 @@
  */
 
 import React, {Component, useState} from 'react';
-import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import { Platform, StyleSheet, View, TouchableOpacity } from 'react-native';
+import { Text, TextInput, ScrollView, Button } from 'components'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -21,7 +22,7 @@ export default function app(props) {
   const [count, setCount] = useState(0);
 
   return (
-    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.welcome}>Welcome to React Native!</Text>
       <Text style={styles.instructions}>To get started, edit App.js</Text>
       <Text style={styles.instructions}>{instructions}</Text>
@@ -29,7 +30,10 @@ export default function app(props) {
       <TouchableOpacity onPress={() => setCount(count+1)}>
         <Text>+</Text>
       </TouchableOpacity>
-    </View>
+      <Button text="app_name" />
+      <Text t="app_name" />
+      <TextInput />
+    </ScrollView>
   );
 }
 

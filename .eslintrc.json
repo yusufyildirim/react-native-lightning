@@ -1,0 +1,25 @@
+{
+    "parser": "babel-eslint",
+    "extends": [
+        "airbnb",
+        "plugin:flowtype/recommended"
+    ],
+    "rules": {
+        "eslint import/no-extraneous-dependencies": ["error", {"devDependencies": false}],
+        "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
+        "react/prefer-stateless-function": [0, { "ignorePureComponents": false }],
+        "react/forbid-prop-types": [0, { "forbid": [] }]
+    },
+    "plugins": [
+        "flowtype",
+        "import"
+    ],
+    "settings": {
+        "import/resolver": {
+            "babel-module": {}
+        },
+        "flowtype": {
+            "onlyFilesWithFlowAnnotation": true
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./app",
+    "paths": {
+      "*": [
+        "*",
+      ]
+    }
+  },
+  "exclude": [
+      "node_modules",
+      "android",
+      "ios"
+  ]
+}
