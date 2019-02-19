@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "ios": "react-native run-ios",
+    "android": "cd ./android && ./gradlew app:assembleDebug && ./gradlew installDebug"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -14,6 +16,7 @@
     "react-native-fast-image": "^5.1.2",
     "react-native-keyboard-aware-scroll-view": "^0.8.0",
     "react-native-localize": "^1.0.3",
+    "react-native-navigation": "^2.12.0",
     "styled-components": "^4.1.3"
   },
   "devDependencies": {

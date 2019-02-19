@@ -1,9 +1,38 @@
-/**
- * @format
- */
+import { Navigation } from 'react-native-navigation';
+import registerScreens from 'screens';
+import { images } from 'resources';
 
-import {AppRegistry} from 'react-native';
-import App from './App';
-import {name as appName} from './app.json';
+registerScreens();
 
-AppRegistry.registerComponent(appName, () => App);
+export function startFromHome() {
+  Navigation.setRoot({
+    root: {
+      stack: {
+        children: [{
+          component: {
+            name: 'HomeScreen',
+          },
+        }],
+        options: {
+        },
+      },
+    },
+  });
+}
+
+Navigation.events().registerAppLaunchedListener(async () => {
+  // Default options for all screens
+  Navigation.setDefaultOptions({
+    topBar: {
+      visible: true,
+      backButton: {
+        color: 'black',
+        showTitle: false
+      },
+      hideBackButtonTitle: true,
+      backButtonImage: images.example,
+    },
+  });
+
+  startFromHome();
+});

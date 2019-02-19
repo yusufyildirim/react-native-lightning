@@ -9,6 +9,7 @@
 import React, {Component, useState} from 'react';
 import { Platform, StyleSheet, View, TouchableOpacity } from 'react-native';
 import { Text, TextInput, ScrollView, Button } from 'components'
+import { Navigation } from 'react-native-navigation';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -21,6 +22,10 @@ type Props = {};
 export default function app(props) {
   const [count, setCount] = useState(0);
 
+  function goTo() {
+    Navigation.push(props.componentId, { component: { name: 'HomeScreen' } });
+  }
+
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.welcome}>Welcome to React Native!</Text>
@@ -30,7 +35,7 @@ export default function app(props) {
       <TouchableOpacity onPress={() => setCount(count+1)}>
         <Text>+</Text>
       </TouchableOpacity>
-      <Button text="app_name" />
+      <Button text="app_name" onPress={goTo}/>
       <Text t="app_name" />
       <TextInput />
     </ScrollView>
@@ -42,7 +47,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#FFFFFF',
   },
   welcome: {
     fontSize: 20,

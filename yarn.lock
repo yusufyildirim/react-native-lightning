@@ -2151,6 +2151,12 @@ has@^1.0.1, has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
+hoist-non-react-statics@3.x.x:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.0.tgz#b09178f0122184fb95acf525daaecb4d8f45958b"
+  dependencies:
+    react-is "^16.7.0"
+
 home-or-tmp@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/home-or-tmp/-/home-or-tmp-3.0.0.tgz#57a8fe24cf33cdd524860a15821ddc25c86671fb"
@@ -3075,7 +3081,7 @@ lodash.throttle@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
 
-lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.5, lodash@^4.3.0, lodash@^4.6.1:
+lodash@4.17.x, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.5, lodash@^4.3.0, lodash@^4.6.1:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
 
@@ -4049,7 +4055,7 @@ prompts@^2.0.1:
     kleur "^3.0.2"
     sisteransi "^1.0.0"
 
-prop-types@^15.5.4, prop-types@^15.5.8, prop-types@^15.6.2:
+prop-types@15.x.x, prop-types@^15.5.4, prop-types@^15.5.8, prop-types@^15.6.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   dependencies:
@@ -4120,9 +4126,13 @@ react-devtools-core@^3.6.0:
     shell-quote "^1.6.1"
     ws "^3.3.1"
 
-react-is@^16.6.0, react-is@^16.8.1:
+react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1:
   version "16.8.2"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.2.tgz#09891d324cad1cb0c1f2d91f70a71a4bee34df0f"
+
+react-lifecycles-compat@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-2.0.0.tgz#71d9c4cde47114c4102454f76da055c2bc48c948"
 
 react-native-fast-image@^5.1.2:
   version "5.1.2"
@@ -4142,6 +4152,16 @@ react-native-keyboard-aware-scroll-view@^0.8.0:
 react-native-localize@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/react-native-localize/-/react-native-localize-1.0.3.tgz#bc555e34f36082f84ce3b8da3cb036a5553a590d"
+
+react-native-navigation@^2.12.0:
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/react-native-navigation/-/react-native-navigation-2.12.0.tgz#3b845a976a0e1b79b6caff185bb109fdb60889f2"
+  dependencies:
+    hoist-non-react-statics "3.x.x"
+    lodash "4.17.x"
+    prop-types "15.x.x"
+    react-lifecycles-compat "2.0.0"
+    tslib "1.9.3"
 
 react-native@0.59.0-rc.1:
   version "0.59.0-rc.1"
@@ -4966,6 +4986,10 @@ tr46@^1.0.1:
 trim-right@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/trim-right/-/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
+
+tslib@1.9.3:
+  version "1.9.3"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
 
 tunnel-agent@^0.6.0:
   version "0.6.0"
