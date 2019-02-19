@@ -15,9 +15,9 @@ function source({ cdn, uri, source }) {
   return { uri };
 }
 
-const MyImage = styled(FastImage).attrs({
-  source: props => source(props),
-})``;
+const MyImage = styled(FastImage).attrs(props => ({
+  source: source(props),
+}))``;
 
 type Props = {
   uri: string,

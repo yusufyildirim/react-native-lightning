@@ -15,12 +15,12 @@ function placeholder({ placeholder_t, placeholder }) {
   return i18n.t(placeholder_t);
 }
 
-const MyTextInput = styled.TextInput.attrs({
-  placeholder: props => placeholder(props),
-  placeholderTextColor: props => color(props.placeholderTextColor, colors.third),
+const MyTextInput = styled.TextInput.attrs(props => ({
+  placeholder: placeholder(props),
+  placeholderTextColor: color(props.placeholderTextColor, colors.third),
   autoCorrect: false,
   underlineColorAndroid: 'transparent',
-})`
+}))`
   paddingVertical: 15
   paddingHorizontal: 15
   color: ${props => color(props.textColor, colors.black)}

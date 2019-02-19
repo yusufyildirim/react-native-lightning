@@ -48,9 +48,9 @@ function style({ custom }) {
 }
 
 const ButtonComponent = styled.TouchableOpacity
-  .attrs({
+  .attrs(() => ({
     activeOpacity: 0.8,
-  })`
+  }))`
   ${props => backgroundColor(props)}
   ${props => paddingVertical(props)}
   ${props => paddingHorizontal(props)}

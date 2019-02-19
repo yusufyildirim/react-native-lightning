@@ -26,12 +26,12 @@ function renderEmptyComponent(props) {
   );
 }
 
-const FlatList = styled(ReactFlatList).attrs({
+const FlatList = styled(ReactFlatList).attrs(() => ({
   showsVerticalScrollIndicator: false,
   ListFooterComponent: renderFooter,
   onEndReachedThreshold: 0.3,
   ListEmptyComponent: renderEmptyComponent,
-})``;
+}))``;
 
 type Props = {
 
